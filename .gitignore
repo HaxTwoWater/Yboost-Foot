@@ -1,0 +1,8 @@
+# Données : jamais versionnées, on les retélécharge avec src/download.py
+data/
+
+# Python
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.env
