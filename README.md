@@ -33,6 +33,18 @@ python src/download.py
 
 Les fichiers sont téléchargés dans `data/raw/`. Les données ne sont pas versionnées (`data/` est dans le `.gitignore`) : chaque membre les récupère avec ce script.
 
+## Nettoyer les données
+
+Ouvrir et exécuter `notebooks/01_nettoyage.ipynb` (avec `jupyter lab`). Il télécharge les fichiers
+s'ils manquent, contrôle les en-têtes, les formats, les vides, les doublons et les valeurs erronées,
+puis écrit les fichiers propres dans `data/processed/`.
+
+Les fonctions de nettoyage sont dans `src/nettoyage.py`. Pour lancer leurs tests :
+
+```bash
+python -m pytest tests
+```
+
 ## Les données
 
 | | |
@@ -50,7 +62,10 @@ Yboost-Foot/
 ├── data/
 │   ├── raw/             # fichiers téléchargés, non modifiés
 │   └── processed/       # tableaux préparés
-├── notebooks/           # exploration
-└── src/
-    └── download.py      # téléchargement des données
+├── notebooks/
+│   └── 01_nettoyage.ipynb  # nettoyage des données brutes
+├── src/
+│   ├── download.py      # téléchargement des données
+│   └── nettoyage.py     # fonctions de nettoyage
+└── tests/               # tests pytest
 ```
