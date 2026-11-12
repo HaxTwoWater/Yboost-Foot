@@ -33,7 +33,8 @@ if __name__ == "__main__":
     FILE_LIST = [
         "results.csv",
         "goalscorers.csv",
-        "shootouts.csv"
+        "shootouts.csv",
+        "former_names.csv"
     ]
     
     download_csv_files(
